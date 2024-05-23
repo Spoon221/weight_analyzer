@@ -32,7 +32,6 @@
         <item>x86_64;Qt6QuickControls2BasicStyleImpl_x86_64</item>
         <item>x86_64;Qt6QuickControls2Basic_x86_64</item>
         <item>x86_64;Qt6QuickShapes_x86_64</item>
-        <item>x86_64;Qt6QuickLayouts_x86_64</item>
     </array>
     <attr format="reference" name="nestedScrollViewStyle"/>
     <color name="androidx_core_ripple_material_light">#1f000000</color>

@@ -1,29 +1,19 @@
 {
     "classes": [
         {
-            "className": "WeightTrackerWrapper",
+            "className": "WeightTracker",
             "object": true,
-            "properties": [
-                {
-                    "constant": false,
-                    "designable": true,
-                    "final": false,
-                    "index": 0,
-                    "name": "previousWeight",
-                    "notify": "previousWeightChanged",
-                    "read": "previousWeight",
-                    "required": false,
-                    "scriptable": true,
-                    "stored": true,
-                    "type": "float",
-                    "user": false
-                }
-            ],
-            "qualifiedClassName": "WeightTrackerWrapper",
+            "qualifiedClassName": "WeightTracker",
             "signals": [
                 {
                     "access": "public",
-                    "name": "previousWeightChanged",
+                    "arguments": [
+                        {
+                            "name": "newWeight",
+                            "type": "float"
+                        }
+                    ],
+                    "name": "weightChanged",
                     "returnType": "void"
                 }
             ],

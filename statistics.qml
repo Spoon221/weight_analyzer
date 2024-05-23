@@ -28,17 +28,8 @@ ApplicationWindow {
             }
         }
     }
-
     StackView {
         id: stackView
         initialItem: Item {}
-    }
-
-    WeightTracker {
-        id: weightTracker
-
-        onPreviousWeightChanged: {
-            weightText.text = "Статистика веса: " + previousWeight
-        }
     }
 }

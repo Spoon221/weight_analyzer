@@ -3,21 +3,20 @@
 
 #include <QObject>
 
-class WeightTrackerWrapper : public QObject
+class WeightTracker : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(float previousWeight READ previousWeight NOTIFY previousWeightChanged)
-
 public:
-    explicit WeightTrackerWrapper(QObject *parent = nullptr);
-
-    float previousWeight() const;
-
-signals:
-    void previousWeightChanged();
+    explicit WeightTracker(QObject *parent = nullptr);
 
 public slots:
     void addWeight(float weight);
+
+signals:
+    void weightChanged(float newWeight);
+
+private:
+    float m_previousWeight;
 };
 
 #endif // WEIGHTTRACKER_H
