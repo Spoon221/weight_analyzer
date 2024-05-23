@@ -1,0 +1,1 @@
+set(__QT_DEPLOY_TARGET_appuntitled1_FILE D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_arm64_v8a-Debug/libappuntitled1_arm64-v8a.so)

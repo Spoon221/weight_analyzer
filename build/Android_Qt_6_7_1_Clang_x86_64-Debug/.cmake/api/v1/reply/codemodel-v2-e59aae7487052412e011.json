@@ -1,0 +1,232 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-51887140904f932d8d9b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "untitled1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "_qt_internal_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_qt_internal_apk_dependencies-Debug-8b97d0215858a3f17e0a.json",
+					"name" : "_qt_internal_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aab-Debug-8f058ca095705a99e089.json",
+					"name" : "aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-38846c9ad7381c050e8b.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-6aa4a8258127edf3307a.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-96b606a8401e5ca24d85.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-8a78260fff8fbe7f69c7.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk-Debug-95c301dcbd5ce5af5dc8.json",
+					"name" : "apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk_all-Debug-232ca29b3d38dcd9961d.json",
+					"name" : "apk_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1-Debug-0c2b905c717c135f946b.json",
+					"name" : "appuntitled1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1_autogen-Debug-e79e0edab824b89f8c1b.json",
+					"name" : "appuntitled1_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1_autogen_timestamp_deps-Debug-881698f00108f5dbbaca.json",
+					"name" : "appuntitled1_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1_make_aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1_make_aab-Debug-b00d8782edc6891e52e2.json",
+					"name" : "appuntitled1_make_aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1_make_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1_make_apk-Debug-d1f70f2aa08180a1e3d1.json",
+					"name" : "appuntitled1_make_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1_prepare_apk_dir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1_prepare_apk_dir-Debug-cac7fd4c4569f1a8c275.json",
+					"name" : "appuntitled1_prepare_apk_dir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1_qmllint-Debug-aef1d381cdf7ad90524f.json",
+					"name" : "appuntitled1_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1_qmllint_json-Debug-d615d40e3a8b4e85e6e6.json",
+					"name" : "appuntitled1_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1_qmllint_module-Debug-e9a057e8935ae2299430.json",
+					"name" : "appuntitled1_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1_qmltyperegistration-Debug-c83b73369ffdd9b55ede.json",
+					"name" : "appuntitled1_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appuntitled1_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appuntitled1_tooling-Debug-1a12aff73652450655a9.json",
+					"name" : "appuntitled1_tooling",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_internal_plugins-Debug-bcfa3988ecbee8bfc333.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Debug",
+		"source" : "D:/weight/untitled1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,53 @@
+{
+    "classes": [
+        {
+            "className": "WeightTrackerWrapper",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "previousWeight",
+                    "notify": "previousWeightChanged",
+                    "read": "previousWeight",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "float",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "WeightTrackerWrapper",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "previousWeightChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "weight",
+                            "type": "float"
+                        }
+                    ],
+                    "name": "addWeight",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "weighttracker.h",
+    "outputRevision": 68
+}

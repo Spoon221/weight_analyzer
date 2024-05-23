@@ -1,0 +1,12 @@
+org.qtproject.example.appuntitled1-java-0 C:\Qt\6.7.1\android_x86_64\src\android\java\res
+org.qtproject.example.appuntitled1-lifecycle-runtime-2.3.1-1 C:\Users\Admin\.gradle\caches\transforms-3\3041f062ae0668b5512922884dfdcb95\transformed\lifecycle-runtime-2.3.1\res
+org.qtproject.example.appuntitled1-annotation-experimental-1.3.0-2 C:\Users\Admin\.gradle\caches\transforms-3\3ea98a6e1db53160b5740f47211ec65c\transformed\annotation-experimental-1.3.0\res
+org.qtproject.example.appuntitled1-core-1.10.1-3 C:\Users\Admin\.gradle\caches\transforms-3\4be2570fd98c550226d6d381b2ee3a14\transformed\core-1.10.1\res
+org.qtproject.example.appuntitled1-pngs-4 D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Debug\android-build\build\generated\res\pngs\debug
+org.qtproject.example.appuntitled1-resValues-5 D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Debug\android-build\build\generated\res\resValues\debug
+org.qtproject.example.appuntitled1-rs-6 D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Debug\android-build\build\generated\res\rs\debug
+org.qtproject.example.appuntitled1-mergeDebugResources-7 D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Debug\android-build\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+org.qtproject.example.appuntitled1-mergeDebugResources-8 D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Debug\android-build\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+org.qtproject.example.appuntitled1-merged_res-9 D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Debug\android-build\build\intermediates\merged_res\debug
+org.qtproject.example.appuntitled1-android-build-10 D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Debug\android-build\res
+org.qtproject.example.appuntitled1-debug-11 D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Debug\android-build\src\debug\res

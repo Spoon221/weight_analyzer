@@ -1,0 +1,14 @@
+-rootPath
+D:/weight/untitled1
+-cmake-output
+-output-file
+D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Debug/.qt/qml_imports/appuntitled1_conf.cmake
+-importPath
+D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Debug/untitled1
+-importPath
+D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Debug
+-importPath
+C:/Qt/6.7.1/android_x86_64/./qml
+-qrcFiles
+D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Debug/.qt/rcc/qmake_untitled1.qrc
+D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Debug/.qt/rcc/appuntitled1_raw_qml_0.qrc
