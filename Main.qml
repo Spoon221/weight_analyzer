@@ -79,7 +79,7 @@ ApplicationWindow {
 
                     Text {
                         id: weightChangeText
-                        text: weightTracker.weightChange // Связываем текст с weightTracker.weightChange
+                        text: weightTracker.weightChange
                         visible: weightModel.count > 1
                     }
                 }
@@ -99,29 +99,22 @@ ApplicationWindow {
                 var formattedDate = date.toLocaleDateString();
                 weights.push({ date: formattedDate, pastWeight: pastWeight, currentWeight: currentWeight, weightChange: (currentWeight - pastWeight).toFixed(2) });
                 weightModel.append({ date: formattedDate, pastWeight: pastWeight, currentWeight: currentWeight, weightChange: (currentWeight - pastWeight).toFixed(2) });
-                updateWeightChange(); // Обновляем weightChange после добавления веса
+
+                updateWeightChange();
+                weightChangeText.text = weightChange;
             }
         }
 
         function updateWeightChange() {
-            if (weights.length > 2) {
+            if (weights.length > 1) {
                 var lastWeight = weights[weights.length - 1].currentWeight;
                 var previousWeight = weights[weights.length - 2].currentWeight;
-                var secondLastWeight = weights[weights.length - 3].currentWeight;
 
                 if (lastWeight > previousWeight) {
-                    if (previousWeight > secondLastWeight) {
-                        weightChange = "Вес увеличился";
-                    } else {
-                        weightChange = "Вес увеличился, но темпы роста снизились";
-                    }
+                    weightChange = "Вес увеличился";
                 } else if (lastWeight < previousWeight) {
-                    if (previousWeight < secondLastWeight) {
-                        weightChange = "Вес уменьшился";
-                    } else {
-                        weightChange = "Вес уменьшился, но темпы снижения замедлились";
-                    }
-                } else {
+                    weightChange = "Вес уменьшился";
+                } else if (Math.abs(lastWeight - previousWeight) < 0.0001) { // Сравнение с погрешностью
                     weightChange = "Вес не изменился";
                 }
             }
