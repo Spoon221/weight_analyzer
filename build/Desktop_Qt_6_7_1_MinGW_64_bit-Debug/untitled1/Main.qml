@@ -22,6 +22,9 @@ ApplicationWindow {
                 TextField {
                     id: pastWeightInput
                     placeholderText: "Вес (кг)"
+                    onTextChanged: {
+                        weightTracker.addWeight(parseFloat(pastWeightInput.text), 0);
+                    }
                 }
             }
 
@@ -32,22 +35,17 @@ ApplicationWindow {
                 TextField {
                     id: currentWeightInput
                     placeholderText: "Вес (кг)"
+                    onTextChanged: {
+                        weightTracker.addWeight(0, parseFloat(currentWeightInput.text));
+                    }
                 }
             }
 
             Button {
                 text: "Показать статистику"
-                onClicked: {
-                    var pastWeight = parseFloat(pastWeightInput.text);
-                    var currentWeight = parseFloat(currentWeightInput.text);
-                    if (!isNaN(pastWeight) && !isNaN(currentWeight)) {
-                        weightTracker.addWeight(pastWeight, currentWeight);
-                        showStatistics.visible = true;
-                        pastWeightInput.text = "";
-                        currentWeightInput.text = "";
-                    } else {
-                        // Обработка ошибки - ввести число
-                    }
+                onPressed: {
+                    showStatistics.visible = true;
+                    weightTable.forceActiveFocus();
                 }
             }
 
@@ -73,6 +71,7 @@ ApplicationWindow {
                                 pastWeight: 0
                                 currentWeight: 0
                                 weightChange: "Изменение веса"
+                                color: "black"
                             }
                         }
                     }
@@ -80,6 +79,7 @@ ApplicationWindow {
                     Text {
                         id: weightChangeText
                         text: weightTracker.weightChange
+                        color: weightTracker.weightChangeColor
                         visible: weightModel.count > 1
                     }
                 }
@@ -89,19 +89,27 @@ ApplicationWindow {
 
     QtObject {
         id: weightTracker
-
         property var weights: []
         property string weightChange: ""
+        property color weightChangeColor: "black"
 
         function addWeight(pastWeight, currentWeight) {
-            if (pastWeight > 0 && currentWeight > 0) {
-                var date = new Date();
-                var formattedDate = date.toLocaleDateString();
-                weights.push({ date: formattedDate, pastWeight: pastWeight, currentWeight: currentWeight, weightChange: (currentWeight - pastWeight).toFixed(2) });
-                weightModel.append({ date: formattedDate, pastWeight: pastWeight, currentWeight: currentWeight, weightChange: (currentWeight - pastWeight).toFixed(2) });
+            if (pastWeight > 0 || currentWeight > 0) {
+                weights.push({
+                    pastWeight: pastWeight,
+                    currentWeight: currentWeight,
+                    weightChange: (currentWeight - pastWeight).toFixed(2)
+                });
 
                 updateWeightChange();
-                weightChangeText.text = weightChange;
+
+                // Добавляем данные в модель, устанавливая цвет
+                weightModel.append({
+                    pastWeight: pastWeight,
+                    currentWeight: currentWeight,
+                    weightChange: (currentWeight - pastWeight).toFixed(2),
+                    color: (currentWeight > pastWeight) ? "red" : ((currentWeight < pastWeight) ? "green" : "black")
+                });
             }
         }
 
@@ -110,12 +118,15 @@ ApplicationWindow {
                 var lastWeight = weights[weights.length - 1].currentWeight;
                 var previousWeight = weights[weights.length - 2].currentWeight;
 
-                if (lastWeight > previousWeight) {
+                if (lastWeight === previousWeight) {
+                    weightChange = "Вес не изменился";
+                    weightChangeColor = "black";
+                } else if (lastWeight > previousWeight) {
                     weightChange = "Вес увеличился";
+                    weightChangeColor = "red";
                 } else if (lastWeight < previousWeight) {
                     weightChange = "Вес уменьшился";
-                } else if (Math.abs(lastWeight - previousWeight) < 0.0001) { // Сравнение с погрешностью
-                    weightChange = "Вес не изменился";
+                    weightChangeColor = "green";
                 }
             }
         }
