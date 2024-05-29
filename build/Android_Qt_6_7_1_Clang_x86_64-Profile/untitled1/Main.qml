@@ -11,21 +11,28 @@ ApplicationWindow {
         width: parent.width
         height: parent.height
 
-        // Используем anchors для Column, а не для элементов внутри него
         Column {
             spacing: 10
             anchors.centerIn: parent
 
+
+            // Ввод прошлого веса
             Row {
                 Text {
                     text: "Введите свой прошлый вес:"
                 }
                 TextField {
+                    horizontalAlignment: Alignment.left
                     id: pastWeightInput
                     placeholderText: "Вес (кг)"
+                    onTextChanged: {
+                        weightTracker.pastWeight = parseFloat(pastWeightInput.text);
+                        weightTracker.updateWeightChange();
+                    }
                 }
             }
 
+            // Ввод текущего веса
             Row {
                 Text {
                     text: "Введите свой нынешний вес:"
@@ -33,94 +40,121 @@ ApplicationWindow {
                 TextField {
                     id: currentWeightInput
                     placeholderText: "Вес (кг)"
-                }
-            }
-
-            Button {
-                text: "Показать статистику"
-                onClicked: {
-                    var pastWeight = parseFloat(pastWeightInput.text);
-                    var currentWeight = parseFloat(currentWeightInput.text);
-                    if (!isNaN(pastWeight) && !isNaN(currentWeight)) {
-                        weightTracker.addWeight(pastWeight, currentWeight);
-                        showStatistics.visible = true;
-                        pastWeightInput.text = "";
-                        currentWeightInput.text = "";
-                    } else {
-                        // Обработка ошибки - ввести число
+                    onTextChanged: {
+                        weightTracker.currentWeight = parseFloat(currentWeightInput.text);
+                        weightTracker.updateWeightChange();
                     }
                 }
             }
 
-            // Внутренний Rectangle для статистики
+            // Кнопка для показа/скрытия статистики
+            Button {
+                id: showStatisticsButton // Добавили идентификатор
+                text: "Показать статистику"
+                onPressed: {
+                    showStatistics.visible = !showStatistics.visible; // Переключение видимости
+                    if (showStatistics.visible) {
+                        weightTable.forceActiveFocus(); // Фокус на таблицу, если статистика видна
+                    }
+                }
+            }
+
+            // Блок с отображением статистики
             Rectangle {
                 id: showStatistics
-                visible: false
+                visible: false // Скрыто по умолчанию
                 width: parent.width
                 height: 200
-                color: "lightgray"
+                color: "lightblue"
 
-                // Используем anchors для Column, а не для элементов внутри него
+
                 Column {
                     spacing: 10
-                    anchors.centerIn: parent
+                    anchors.centerIn: parent // Выравниваем все элементы по центру
 
                     Text {
                         text: "Статистика:"
+                        font.pointSize: 18 // Увеличиваем размер шрифта
+                        font.bold: true // Делаем шрифт жирным
+                        horizontalAlignment: Text.AlignHCenter // Выравниваем по центру
                     }
 
+                    // Таблица с данными о весе
                     TableView {
                         id: weightTable
-                        anchors.fill: parent
                         model: ListModel {
                             id: weightModel
                             ListElement {
-                                date: "Дата"
                                 pastWeight: 0
                                 currentWeight: 0
                                 weightChange: "Изменение веса"
+                                color: "black"
                             }
                         }
+                        anchors.horizontalCenter: parent // Выравниваем по центру
                     }
 
+                    // Текст, отображающий изменение веса
                     Text {
                         id: weightChangeText
-                        text: ""
-                        visible: weightModel.count > 1  // Показываем текст только если есть более одной записи
+                        text: weightTracker.weightChange
+                        color: weightTracker.weightChangeColor
+                        // Выравниваем по центру
+                        horizontalAlignment: Text.AlignHCenter
+                        // Увеличиваем размер шрифта
+                        font.pointSize: 14
+                        // Добавляем отступ сверху
+                        anchors.topMargin: 10
                     }
                 }
             }
         }
     }
 
+    // Объект для отслеживания и обработки данных о весе
     QtObject {
         id: weightTracker
-
         property var weights: []
         property string weightChange: ""
+        property color weightChangeColor: "black"
+        property real pastWeight: 0
+        property real currentWeight: 0
 
-        function addWeight(pastWeight, currentWeight) {
+        // Функция для добавления данных о весе в массив
+        function addWeight() {
             if (pastWeight > 0 && currentWeight > 0) {
-                var date = new Date();
-                var formattedDate = date.toLocaleDateString();
-                weights.push({ date: formattedDate, pastWeight: pastWeight, currentWeight: currentWeight, weightChange: (currentWeight - pastWeight).toFixed(2) });
-                weightModel.append({ date: formattedDate, pastWeight: pastWeight, currentWeight: currentWeight, weightChange: (currentWeight - pastWeight).toFixed(2) });
-                updateWeightChange();
+                weights.push({
+                                 pastWeight: pastWeight,
+                                 currentWeight: currentWeight,
+                                 weightChange: (currentWeight - pastWeight).toFixed(2)
+                             });
+
+                // Добавляем данные в модель, устанавливая цвет
+                weightModel.append({
+                                       pastWeight: pastWeight,
+                                       currentWeight: currentWeight,
+                                       weightChange: (currentWeight - pastWeight).toFixed(2),
+                                       color: (currentWeight > pastWeight) ? "red" : ((currentWeight < pastWeight) ? "green" : "black")
+                                   });
             }
         }
 
+        // Функция для обновления текста и цвета изменения веса
         function updateWeightChange() {
-            if (weights.length > 1) {
-                var lastWeight = weights[weights.length - 1].currentWeight;
-                var previousWeight = weights[weights.length - 2].currentWeight;
-
-                if (lastWeight > previousWeight) {
-                    weightChangeText.text = "Вес увеличился";
-                } else if (lastWeight < previousWeight) {
-                    weightChangeText.text = "Вес уменьшился";
-                } else {
-                    weightChangeText.text = "Вес не изменился";
+            if (pastWeight > 0 && currentWeight > 0) {
+                if (pastWeight === currentWeight) {
+                    weightChange = "Вес не изменился";
+                    weightChangeColor = "black";
+                } else if (currentWeight > pastWeight) {
+                    weightChange = "Вес увеличился";
+                    weightChangeColor = "red";
+                } else if (currentWeight < pastWeight) {
+                    weightChange = "Вес уменьшился";
+                    weightChangeColor = "green";
                 }
+            } else {
+                weightChange = "";
+                weightChangeColor = "black";
             }
         }
     }

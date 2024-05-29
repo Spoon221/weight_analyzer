@@ -15,19 +15,24 @@ ApplicationWindow {
             spacing: 10
             anchors.centerIn: parent
 
+
+            // Ввод прошлого веса
             Row {
                 Text {
                     text: "Введите свой прошлый вес:"
                 }
                 TextField {
+                    horizontalAlignment: Alignment.left
                     id: pastWeightInput
                     placeholderText: "Вес (кг)"
                     onTextChanged: {
-                        weightTracker.addWeight(parseFloat(pastWeightInput.text), 0);
+                        weightTracker.pastWeight = parseFloat(pastWeightInput.text);
+                        weightTracker.updateWeightChange();
                     }
                 }
             }
 
+            // Ввод текущего веса
             Row {
                 Text {
                     text: "Введите свой нынешний вес:"
@@ -36,33 +41,45 @@ ApplicationWindow {
                     id: currentWeightInput
                     placeholderText: "Вес (кг)"
                     onTextChanged: {
-                        weightTracker.addWeight(0, parseFloat(currentWeightInput.text));
+                        weightTracker.currentWeight = parseFloat(currentWeightInput.text);
+                        weightTracker.updateWeightChange();
                     }
                 }
             }
 
+            // Кнопка для показа/скрытия статистики
             Button {
+                id: showStatisticsButton // Добавили идентификатор
                 text: "Показать статистику"
                 onPressed: {
-                    showStatistics.visible = true;
-                    weightTable.forceActiveFocus();
+                    showStatistics.visible = !showStatistics.visible; // Переключение видимости
+                    if (showStatistics.visible) {
+                        weightTable.forceActiveFocus(); // Фокус на таблицу, если статистика видна
+                    }
                 }
             }
 
+            // Блок с отображением статистики
             Rectangle {
                 id: showStatistics
-                visible: false
+                visible: false // Скрыто по умолчанию
                 width: parent.width
                 height: 200
-                color: "lightgray"
+                color: "lightblue"
+
 
                 Column {
                     spacing: 10
+                    anchors.centerIn: parent // Выравниваем все элементы по центру
 
                     Text {
                         text: "Статистика:"
+                        font.pointSize: 18 // Увеличиваем размер шрифта
+                        font.bold: true // Делаем шрифт жирным
+                        horizontalAlignment: Text.AlignHCenter // Выравниваем по центру
                     }
 
+                    // Таблица с данными о весе
                     TableView {
                         id: weightTable
                         model: ListModel {
@@ -74,60 +91,70 @@ ApplicationWindow {
                                 color: "black"
                             }
                         }
+                        anchors.horizontalCenter: parent // Выравниваем по центру
                     }
 
+                    // Текст, отображающий изменение веса
                     Text {
                         id: weightChangeText
                         text: weightTracker.weightChange
                         color: weightTracker.weightChangeColor
-                        visible: weightModel.count > 1
+                        // Выравниваем по центру
+                        horizontalAlignment: Text.AlignHCenter
+                        // Увеличиваем размер шрифта
+                        font.pointSize: 14
+                        // Добавляем отступ сверху
+                        anchors.topMargin: 10
                     }
                 }
             }
         }
     }
 
+    // Объект для отслеживания и обработки данных о весе
     QtObject {
         id: weightTracker
         property var weights: []
         property string weightChange: ""
         property color weightChangeColor: "black"
+        property real pastWeight: 0
+        property real currentWeight: 0
 
-        function addWeight(pastWeight, currentWeight) {
-            if (pastWeight > 0 || currentWeight > 0) {
+        // Функция для добавления данных о весе в массив
+        function addWeight() {
+            if (pastWeight > 0 && currentWeight > 0) {
                 weights.push({
-                    pastWeight: pastWeight,
-                    currentWeight: currentWeight,
-                    weightChange: (currentWeight - pastWeight).toFixed(2)
-                });
-
-                updateWeightChange();
+                                 pastWeight: pastWeight,
+                                 currentWeight: currentWeight,
+                                 weightChange: (currentWeight - pastWeight).toFixed(2)
+                             });
 
                 // Добавляем данные в модель, устанавливая цвет
                 weightModel.append({
-                    pastWeight: pastWeight,
-                    currentWeight: currentWeight,
-                    weightChange: (currentWeight - pastWeight).toFixed(2),
-                    color: (currentWeight > pastWeight) ? "red" : ((currentWeight < pastWeight) ? "green" : "black")
-                });
+                                       pastWeight: pastWeight,
+                                       currentWeight: currentWeight,
+                                       weightChange: (currentWeight - pastWeight).toFixed(2),
+                                       color: (currentWeight > pastWeight) ? "red" : ((currentWeight < pastWeight) ? "green" : "black")
+                                   });
             }
         }
 
+        // Функция для обновления текста и цвета изменения веса
         function updateWeightChange() {
-            if (weights.length > 1) {
-                var lastWeight = weights[weights.length - 1].currentWeight;
-                var previousWeight = weights[weights.length - 2].currentWeight;
-
-                if (lastWeight === previousWeight) {
+            if (pastWeight > 0 && currentWeight > 0) {
+                if (pastWeight === currentWeight) {
                     weightChange = "Вес не изменился";
                     weightChangeColor = "black";
-                } else if (lastWeight > previousWeight) {
+                } else if (currentWeight > pastWeight) {
                     weightChange = "Вес увеличился";
                     weightChangeColor = "red";
-                } else if (lastWeight < previousWeight) {
+                } else if (currentWeight < pastWeight) {
                     weightChange = "Вес уменьшился";
                     weightChangeColor = "green";
                 }
+            } else {
+                weightChange = "";
+                weightChangeColor = "black";
             }
         }
     }

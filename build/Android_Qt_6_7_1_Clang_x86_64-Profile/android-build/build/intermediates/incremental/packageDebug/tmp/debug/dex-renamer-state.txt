@@ -1,4 +1,4 @@
-#Wed May 29 12:29:07 YEKT 2024
+#Wed May 29 16:43:49 YEKT 2024
 base.0=D\:\\weight\\untitled1\\build\\Android_Qt_6_7_1_Clang_x86_64-Profile\\android-build\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\weight\\untitled1\\build\\Android_Qt_6_7_1_Clang_x86_64-Profile\\android-build\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=D\:\\weight\\untitled1\\build\\Android_Qt_6_7_1_Clang_x86_64-Profile\\android-build\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
