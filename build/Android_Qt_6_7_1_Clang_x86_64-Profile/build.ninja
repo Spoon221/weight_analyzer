@@ -482,7 +482,7 @@ build CMakeFiles/appuntitled1_make_aab | ${cmake_ninja_workdir}CMakeFiles/appunt
 #############################################
 # Phony custom command for CMakeFiles\appuntitled1_autogen_timestamp_deps
 
-build CMakeFiles/appuntitled1_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/appuntitled1_autogen_timestamp_deps: phony C$:/Qt/6.7.1/mingw_64/./bin/moc.exe C$:/Qt/6.7.1/android_x86_64/lib/libQt6Quick_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6Qml_x86_64.so
+build CMakeFiles/appuntitled1_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/appuntitled1_autogen_timestamp_deps: phony C$:/Qt/6.7.1/mingw_64/./bin/moc.exe C$:/Qt/6.7.1/android_x86_64/lib/libQt6Qml_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6Quick_x86_64.so
 
 
 #############################################

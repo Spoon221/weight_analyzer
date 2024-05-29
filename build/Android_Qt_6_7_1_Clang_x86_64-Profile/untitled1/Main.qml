@@ -1,48 +1,75 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 
-ApplicationWindow {
-    visible: true
-    width: 400
-    height: 400
-    title: "Анализатор веса"
+Rectangle {
+    id: root
+    width: 300
+    height: 200
+    color: "lightgray"
 
-    Rectangle {
-        width: parent.width
-        height: parent.height
+    Column {
+        spacing: 10
+        anchors.centerIn: parent
 
-        Column {
-            spacing: 10
-            anchors.centerIn: parent
+        Text {
+            text: "Вчерашний вес:"
+        }
 
-            Text {
-                text: "Введите свой вес:"
-            }
+        TextField {
+            id: yesterdayWeight
+            placeholderText: "Введите вес"
+            inputMethodHints: Qt.ImhDigitsOnly
+        }
 
-            TextField {
-                id: weightInput
-                placeholderText: "Вес (кг)"
-            }
+        Text {
+            text: "Сегодняшний вес:"
+        }
 
-            Button {
-                text: "Подтвердить"
-                onClicked: {
-                    weightTracker.addWeight(parseFloat(weightInput.text))
-                    weightInput.text = ""
-                }
-            }
+        TextField {
+            id: todayWeight
+            placeholderText: "Введите вес"
+            inputMethodHints: Qt.ImhDigitsOnly
+        }
 
-            Button {
-                text: "Показать статистику"
-                onClicked: {
-                    stackView.push("statistics.qml")
-                }
-            }
+        Text {
+            id: weightChangeText
+            font.bold: true
+            horizontalAlignment: Text.AlignHCenter
         }
     }
 
-    StackView {
-        id: stackView
-        initialItem: Item { }
+    Connections {
+        target: yesterdayWeight
+        onTextChanged: {
+            updateWeightChange();
+        }
+    }
+
+    Connections {
+        target: todayWeight
+        onTextChanged: {
+            updateWeightChange();
+        }
+    }
+
+    function updateWeightChange() {
+        var yesterday = yesterdayWeight.text.trim();
+        var today = todayWeight.text.trim();
+
+        if (yesterday === "" || today === "") {
+            weightChangeText.text = "";
+            return;
+        }
+
+        var yesterdayFloat = parseFloat(yesterday);
+        var todayFloat = parseFloat(today);
+
+        if (todayFloat > yesterdayFloat) {
+            weightChangeText.text = "Вес повысился";
+        } else if (todayFloat < yesterdayFloat) {
+            weightChangeText.text = "Вес понизился";
+        } else {
+            weightChangeText.text = "Вес остался прежним";
+        }
     }
 }

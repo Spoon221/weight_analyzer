@@ -20,9 +20,9 @@ qt_add_qml_module(appuntitled1
         SOURCES
         SOURCES
         SOURCES
-        SOURCES weighttracker.h weighttracker.cpp
+        SOURCES
         RESOURCES
-        QML_FILES statistics.qml
+        QML_FILES
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

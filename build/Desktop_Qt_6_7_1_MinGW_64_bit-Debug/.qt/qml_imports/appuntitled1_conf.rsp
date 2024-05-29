@@ -1,0 +1,14 @@
+-rootPath
+D:/weight/untitled1
+-cmake-output
+-output-file
+D:/weight/untitled1/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/.qt/qml_imports/appuntitled1_conf.cmake
+-importPath
+D:/weight/untitled1/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/untitled1
+-importPath
+D:/weight/untitled1/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug
+-importPath
+C:/Qt/6.7.1/mingw_64/./qml
+-qrcFiles
+D:/weight/untitled1/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/.qt/rcc/qmake_untitled1.qrc
+D:/weight/untitled1/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/.qt/rcc/appuntitled1_raw_qml_0.qrc

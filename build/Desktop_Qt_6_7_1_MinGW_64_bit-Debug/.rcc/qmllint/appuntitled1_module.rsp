@@ -1,0 +1,10 @@
+-I
+D:/weight/untitled1/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug
+-I
+C:/Qt/6.7.1/mingw_64/./qml
+--resource
+D:/weight/untitled1/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/.qt/rcc/qmake_untitled1.qrc
+--resource
+D:/weight/untitled1/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/.qt/rcc/appuntitled1_raw_qml_0.qrc
+--module
+untitled1
