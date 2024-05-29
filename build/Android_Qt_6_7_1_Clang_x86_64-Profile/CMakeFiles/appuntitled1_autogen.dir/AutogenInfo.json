@@ -645,15 +645,7 @@
 	"CMAKE_SOURCE_DIR" : "D:/weight/untitled1",
 	"DEP_FILE" : "D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/appuntitled1_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "appuntitled1_autogen/timestamp",
-	"HEADERS" : 
-	[
-		[
-			"D:/weight/untitled1/weighttracker.h",
-			"MU",
-			"EWIEGA46WW/moc_weighttracker.cpp",
-			null
-		]
-	],
+	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/appuntitled1_autogen/include",
 	"MOC_COMPILATION_FILE" : "D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/appuntitled1_autogen/mocs_compilation.cpp",
@@ -731,7 +723,6 @@
 		"D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.qt/rcc/qrc_qmake_untitled1.cpp",
 		"D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_Main_qml.cpp",
 		"D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_qmlcache_loader.cpp",
-		"D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_statistics_qml.cpp",
 		"D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/appuntitled1_qmltyperegistrations.cpp"
 	],
 	"MULTI_CONFIG" : false,
@@ -744,8 +735,7 @@
 	"SETTINGS_FILE" : "D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/CMakeFiles/appuntitled1_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "D:/weight/untitled1/main.cpp", "MU", null ],
-		[ "D:/weight/untitled1/weighttracker.cpp", "MU", null ]
+		[ "D:/weight/untitled1/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
@@ -755,7 +745,6 @@
 		"D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.qt/rcc/qrc_qmake_untitled1.cpp",
 		"D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_Main_qml.cpp",
 		"D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_qmlcache_loader.cpp",
-		"D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_statistics_qml.cpp",
 		"D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/appuntitled1_qmltyperegistrations.cpp"
 	],
 	"UIC_UI_FILES" : [],

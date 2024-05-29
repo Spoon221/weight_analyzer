@@ -1,7 +1,6 @@
 <RCC>
   <qresource prefix="/qt/qml/untitled1/">
     <file alias="Main.qml">D:/weight/untitled1/Main.qml</file>
-    <file alias="statistics.qml">D:/weight/untitled1/statistics.qml</file>
   </qresource>
 </RCC>
 

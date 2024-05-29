@@ -15,27 +15,39 @@ ApplicationWindow {
             spacing: 10
             anchors.centerIn: parent
 
-            Text {
-                text: "Введите свой вес:"
+            Row {
+                Text {
+                    text: "Введите свой прошлый вес:"
+                }
+                TextField {
+                    id: pastWeightInput
+                    placeholderText: "Вес (кг)"
+                }
             }
 
-            TextField {
-                id: weightInput
-                placeholderText: "Вес (кг)"
-            }
-
-            Button {
-                text: "Подтвердить"
-                onClicked: {
-                    weightTracker.addWeight(parseFloat(weightInput.text))
-                    weightInput.text = ""
+            Row {
+                Text {
+                    text: "Введите свой нынешний вес:"
+                }
+                TextField {
+                    id: currentWeightInput
+                    placeholderText: "Вес (кг)"
                 }
             }
 
             Button {
                 text: "Показать статистику"
                 onClicked: {
-                    showStatistics.visible = true
+                    var pastWeight = parseFloat(pastWeightInput.text);
+                    var currentWeight = parseFloat(currentWeightInput.text);
+                    if (!isNaN(pastWeight) && !isNaN(currentWeight)) {
+                        weightTracker.addWeight(pastWeight, currentWeight);
+                        showStatistics.visible = true;
+                        pastWeightInput.text = "";
+                        currentWeightInput.text = "";
+                    } else {
+                        // Обработка ошибки - ввести число
+                    }
                 }
             }
 
@@ -48,36 +60,31 @@ ApplicationWindow {
 
                 Column {
                     spacing: 10
-                    anchors.centerIn: parent
 
                     Text {
                         text: "Статистика:"
                     }
 
                     TableView {
-                                id: weightTable
-                                anchors.fill: parent
-                                model: ListModel {
-                                    id: weightModel
-                                    ListElement {
-                                        date: "Дата"
-                                        weight: "Вес"
-                                    }
-                                }
+                        id: weightTable
+                        model: ListModel {
+                            id: weightModel
+                            ListElement {
+                                pastWeight: 0
+                                currentWeight: 0
+                                weightChange: "Изменение веса"
+                            }
+                        }
                     }
 
                     Text {
                         id: weightChangeText
-                        text: ""
+                        text: weightTracker.weightChange // Связываем текст с weightTracker.weightChange
+                        visible: weightModel.count > 1
                     }
                 }
             }
         }
-    }
-
-    Component.onCompleted: {
-        weightTracker.loadWeightsFromStorage()
-        weightTracker.updateWeightChange()
     }
 
     QtObject {
@@ -86,42 +93,36 @@ ApplicationWindow {
         property var weights: []
         property string weightChange: ""
 
-        function addWeight(weight) {
-                    if (weight > 0) {
-                        var date = new Date();
-                        var formattedDate = date.toLocaleDateString();
-                        weights.push({ date: formattedDate, weight: weight });
-                        weightModel.append({ date: formattedDate, weight: weight });
-                        saveWeightsToStorage();
-                        updateWeightChange();
-                    }
-                }
-
-        function loadWeightsFromStorage() {
-                    var storedWeights = Qt.LocalStorage.getItem('weights');
-                    if (storedWeights) {
-                        weights = JSON.parse(storedWeights);
-                        for (var i = 0; i < weights.length; i++) {
-                            weightModel.append(weights[i]);
-                        }
-                    }
-                }
-
-        function saveWeightsToStorage() {
-                    Qt.LocalStorage.setItem('weights', JSON.stringify(weights));
-                }
+        function addWeight(pastWeight, currentWeight) {
+            if (pastWeight > 0 && currentWeight > 0) {
+                var date = new Date();
+                var formattedDate = date.toLocaleDateString();
+                weights.push({ date: formattedDate, pastWeight: pastWeight, currentWeight: currentWeight, weightChange: (currentWeight - pastWeight).toFixed(2) });
+                weightModel.append({ date: formattedDate, pastWeight: pastWeight, currentWeight: currentWeight, weightChange: (currentWeight - pastWeight).toFixed(2) });
+                updateWeightChange(); // Обновляем weightChange после добавления веса
+            }
+        }
 
         function updateWeightChange() {
-            if (weights.length > 1) {
-                var lastWeight = weights[weights.length - 1].weight;
-                var previousWeight = weights[weights.length - 2].weight;
+            if (weights.length > 2) {
+                var lastWeight = weights[weights.length - 1].currentWeight;
+                var previousWeight = weights[weights.length - 2].currentWeight;
+                var secondLastWeight = weights[weights.length - 3].currentWeight;
 
                 if (lastWeight > previousWeight) {
-                    weightChangeText.text = "Вес увеличился";
+                    if (previousWeight > secondLastWeight) {
+                        weightChange = "Вес увеличился";
+                    } else {
+                        weightChange = "Вес увеличился, но темпы роста снизились";
+                    }
                 } else if (lastWeight < previousWeight) {
-                    weightChangeText.text = "Вес уменьшился";
+                    if (previousWeight < secondLastWeight) {
+                        weightChange = "Вес уменьшился";
+                    } else {
+                        weightChange = "Вес уменьшился, но темпы снижения замедлились";
+                    }
                 } else {
-                    weightChangeText.text = "Вес не изменился";
+                    weightChange = "Вес не изменился";
                 }
             }
         }

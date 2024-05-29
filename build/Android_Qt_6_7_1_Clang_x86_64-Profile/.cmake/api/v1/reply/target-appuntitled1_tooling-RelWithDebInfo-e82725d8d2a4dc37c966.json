@@ -69,16 +69,14 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				2,
-				3
+				1
 			]
 		}
 	],
@@ -91,21 +89,9 @@
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 5,
-			"isGenerated" : true,
-			"path" : "build/Android_Qt_6_7_1_Clang_x86_64-Profile/untitled1/statistics.qml",
-			"sourceGroupIndex" : 0
-		},
-		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Android_Qt_6_7_1_Clang_x86_64-Profile/untitled1/Main.qml.rule",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "build/Android_Qt_6_7_1_Clang_x86_64-Profile/untitled1/statistics.qml.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

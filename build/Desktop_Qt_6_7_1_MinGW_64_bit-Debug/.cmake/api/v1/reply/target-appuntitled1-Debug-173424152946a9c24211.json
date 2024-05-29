@@ -105,13 +105,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 44,
+				"line" : 46,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 39,
+				"line" : 41,
 				"parent" : 0
 			},
 			{
@@ -1002,19 +1002,19 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 70,
-			"id" : "appuntitled1_tooling::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 77,
-			"id" : "appuntitled1_qmlimportscan::@6890427a1f51a3e7e1df"
+			"id" : "appuntitled1_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "appuntitled1_autogen::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "appuntitled1_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 70,
+			"id" : "appuntitled1_tooling::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 77,
+			"id" : "appuntitled1_qmlimportscan::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appuntitled1::@6890427a1f51a3e7e1df",

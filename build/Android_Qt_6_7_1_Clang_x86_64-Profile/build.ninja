@@ -59,7 +59,7 @@ build aab: phony appuntitled1_make_aab
 #############################################
 # Order-only phony target for appuntitled1
 
-build cmake_object_order_depends_target_appuntitled1: phony || .qt/rcc/qrc_appuntitled1_raw_qml_0.cpp .qt/rcc/qrc_qmake_untitled1.cpp .rcc/qmlcache/appuntitled1_Main_qml.cpp .rcc/qmlcache/appuntitled1_qmlcache_loader.cpp .rcc/qmlcache/appuntitled1_statistics_qml.cpp appuntitled1_autogen appuntitled1_autogen/mocs_compilation.cpp appuntitled1_autogen/timestamp appuntitled1_autogen_timestamp_deps appuntitled1_qmltyperegistrations.cpp appuntitled1_tooling meta_types/appuntitled1_json_file_list.txt meta_types/appuntitled1_json_file_list.txt.timestamp meta_types/qt6appuntitled1_relwithdebinfo_metatypes.json meta_types/qt6appuntitled1_relwithdebinfo_metatypes.json.gen untitled1/appuntitled1.qmltypes
+build cmake_object_order_depends_target_appuntitled1: phony || .qt/rcc/qrc_appuntitled1_raw_qml_0.cpp .qt/rcc/qrc_qmake_untitled1.cpp .rcc/qmlcache/appuntitled1_Main_qml.cpp .rcc/qmlcache/appuntitled1_qmlcache_loader.cpp appuntitled1_autogen appuntitled1_autogen/mocs_compilation.cpp appuntitled1_autogen/timestamp appuntitled1_autogen_timestamp_deps appuntitled1_qmltyperegistrations.cpp appuntitled1_tooling meta_types/appuntitled1_json_file_list.txt meta_types/appuntitled1_json_file_list.txt.timestamp meta_types/qt6appuntitled1_relwithdebinfo_metatypes.json meta_types/qt6appuntitled1_relwithdebinfo_metatypes.json.gen untitled1/appuntitled1.qmltypes
 
 build CMakeFiles/appuntitled1.dir/appuntitled1_autogen/mocs_compilation.cpp.o: CXX_COMPILER__appuntitled1_unscanned_RelWithDebInfo D$:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/appuntitled1_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_appuntitled1
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLBUILTINS_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -Dappuntitled1_EXPORTS
@@ -93,14 +93,6 @@ build CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.q
   OBJECT_DIR = CMakeFiles\appuntitled1.dir
   OBJECT_FILE_DIR = CMakeFiles\appuntitled1.dir\build\Android_Qt_6_7_1_Clang_x86_64-Profile\.qt\rcc
 
-build CMakeFiles/appuntitled1.dir/weighttracker.cpp.o: CXX_COMPILER__appuntitled1_unscanned_RelWithDebInfo D$:/weight/untitled1/weighttracker.cpp || cmake_object_order_depends_target_appuntitled1
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLBUILTINS_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -Dappuntitled1_EXPORTS
-  DEP_FILE = CMakeFiles\appuntitled1.dir\weighttracker.cpp.o.d
-  FLAGS = -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -O2 -g -DNDEBUG -fPIC -fvisibility=default -fcolor-diagnostics -fPIC -pthread
-  INCLUDES = -ID:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/appuntitled1_autogen/include -ID:/weight/untitled1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtQml/6.7.1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtQml/6.7.1/QtQml -isystem C:/Qt/6.7.1/android_x86_64/include/QtCore/6.7.1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtCore/6.7.1/QtCore -isystem C:/Qt/6.7.1/android_x86_64/include/QtCore -isystem C:/Qt/6.7.1/android_x86_64/include -isystem C:/Qt/6.7.1/android_x86_64/mkspecs/android-clang -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlBuiltins/6.7.1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlBuiltins/6.7.1/QtQmlBuiltins -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlBuiltins -isystem C:/Qt/6.7.1/android_x86_64/include/QtQml -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlIntegration -isystem C:/Qt/6.7.1/android_x86_64/include/QtNetwork -isystem C:/Qt/6.7.1/android_x86_64/include/QtQuick -isystem C:/Qt/6.7.1/android_x86_64/include/QtGui -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlModels -isystem C:/Qt/6.7.1/android_x86_64/include/QtOpenGL
-  OBJECT_DIR = CMakeFiles\appuntitled1.dir
-  OBJECT_FILE_DIR = CMakeFiles\appuntitled1.dir
-
 build CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_qmlcache_loader.cpp.o: CXX_COMPILER__appuntitled1_unscanned_RelWithDebInfo D$:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_qmlcache_loader.cpp || cmake_object_order_depends_target_appuntitled1
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLBUILTINS_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -Dappuntitled1_EXPORTS
   DEP_FILE = CMakeFiles\appuntitled1.dir\build\Android_Qt_6_7_1_Clang_x86_64-Profile\.rcc\qmlcache\appuntitled1_qmlcache_loader.cpp.o.d
@@ -112,14 +104,6 @@ build CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.r
 build CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_Main_qml.cpp.o: CXX_COMPILER__appuntitled1_unscanned_RelWithDebInfo D$:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_Main_qml.cpp || cmake_object_order_depends_target_appuntitled1
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLBUILTINS_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -Dappuntitled1_EXPORTS
   DEP_FILE = CMakeFiles\appuntitled1.dir\build\Android_Qt_6_7_1_Clang_x86_64-Profile\.rcc\qmlcache\appuntitled1_Main_qml.cpp.o.d
-  FLAGS = -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -O2 -g -DNDEBUG -fPIC -fvisibility=default -fcolor-diagnostics -fPIC -pthread
-  INCLUDES = -ID:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/appuntitled1_autogen/include -ID:/weight/untitled1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtQml/6.7.1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtQml/6.7.1/QtQml -isystem C:/Qt/6.7.1/android_x86_64/include/QtCore/6.7.1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtCore/6.7.1/QtCore -isystem C:/Qt/6.7.1/android_x86_64/include/QtCore -isystem C:/Qt/6.7.1/android_x86_64/include -isystem C:/Qt/6.7.1/android_x86_64/mkspecs/android-clang -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlBuiltins/6.7.1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlBuiltins/6.7.1/QtQmlBuiltins -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlBuiltins -isystem C:/Qt/6.7.1/android_x86_64/include/QtQml -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlIntegration -isystem C:/Qt/6.7.1/android_x86_64/include/QtNetwork -isystem C:/Qt/6.7.1/android_x86_64/include/QtQuick -isystem C:/Qt/6.7.1/android_x86_64/include/QtGui -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlModels -isystem C:/Qt/6.7.1/android_x86_64/include/QtOpenGL
-  OBJECT_DIR = CMakeFiles\appuntitled1.dir
-  OBJECT_FILE_DIR = CMakeFiles\appuntitled1.dir\build\Android_Qt_6_7_1_Clang_x86_64-Profile\.rcc\qmlcache
-
-build CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_statistics_qml.cpp.o: CXX_COMPILER__appuntitled1_unscanned_RelWithDebInfo D$:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_statistics_qml.cpp || cmake_object_order_depends_target_appuntitled1
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLBUILTINS_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -Dappuntitled1_EXPORTS
-  DEP_FILE = CMakeFiles\appuntitled1.dir\build\Android_Qt_6_7_1_Clang_x86_64-Profile\.rcc\qmlcache\appuntitled1_statistics_qml.cpp.o.d
   FLAGS = -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -O2 -g -DNDEBUG -fPIC -fvisibility=default -fcolor-diagnostics -fPIC -pthread
   INCLUDES = -ID:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/appuntitled1_autogen/include -ID:/weight/untitled1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtQml/6.7.1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtQml/6.7.1/QtQml -isystem C:/Qt/6.7.1/android_x86_64/include/QtCore/6.7.1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtCore/6.7.1/QtCore -isystem C:/Qt/6.7.1/android_x86_64/include/QtCore -isystem C:/Qt/6.7.1/android_x86_64/include -isystem C:/Qt/6.7.1/android_x86_64/mkspecs/android-clang -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlBuiltins/6.7.1 -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlBuiltins/6.7.1/QtQmlBuiltins -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlBuiltins -isystem C:/Qt/6.7.1/android_x86_64/include/QtQml -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlIntegration -isystem C:/Qt/6.7.1/android_x86_64/include/QtNetwork -isystem C:/Qt/6.7.1/android_x86_64/include/QtQuick -isystem C:/Qt/6.7.1/android_x86_64/include/QtGui -isystem C:/Qt/6.7.1/android_x86_64/include/QtQmlModels -isystem C:/Qt/6.7.1/android_x86_64/include/QtOpenGL
   OBJECT_DIR = CMakeFiles\appuntitled1.dir
@@ -141,7 +125,7 @@ build CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.q
 #############################################
 # Link the shared module libappuntitled1_x86_64.so
 
-build libappuntitled1_x86_64.so: CXX_MODULE_LIBRARY_LINKER__appuntitled1_RelWithDebInfo CMakeFiles/appuntitled1.dir/appuntitled1_autogen/mocs_compilation.cpp.o CMakeFiles/appuntitled1.dir/main.cpp.o CMakeFiles/appuntitled1.dir/appuntitled1_qmltyperegistrations.cpp.o CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.qt/rcc/qrc_qmake_untitled1.cpp.o CMakeFiles/appuntitled1.dir/weighttracker.cpp.o CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_qmlcache_loader.cpp.o CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_Main_qml.cpp.o CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_statistics_qml.cpp.o CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.qt/rcc/qrc_appuntitled1_raw_qml_0.cpp.o | C$:/Qt/6.7.1/android_x86_64/lib/libQt6Quick_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6QmlModels_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6Qml_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6QmlBuiltins_x86_64.a C$:/Qt/6.7.1/android_x86_64/lib/libQt6Network_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6OpenGL_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6Gui_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6Core_x86_64.so C$:/Users/Admin/AppData/Local/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/libGLESv2.so C$:/Users/Admin/AppData/Local/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/libEGL.so || appuntitled1_autogen appuntitled1_autogen_timestamp_deps appuntitled1_tooling
+build libappuntitled1_x86_64.so: CXX_MODULE_LIBRARY_LINKER__appuntitled1_RelWithDebInfo CMakeFiles/appuntitled1.dir/appuntitled1_autogen/mocs_compilation.cpp.o CMakeFiles/appuntitled1.dir/main.cpp.o CMakeFiles/appuntitled1.dir/appuntitled1_qmltyperegistrations.cpp.o CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.qt/rcc/qrc_qmake_untitled1.cpp.o CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_qmlcache_loader.cpp.o CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_Main_qml.cpp.o CMakeFiles/appuntitled1.dir/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.qt/rcc/qrc_appuntitled1_raw_qml_0.cpp.o | C$:/Qt/6.7.1/android_x86_64/lib/libQt6Quick_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6QmlModels_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6Qml_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6QmlBuiltins_x86_64.a C$:/Qt/6.7.1/android_x86_64/lib/libQt6Network_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6OpenGL_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6Gui_x86_64.so C$:/Qt/6.7.1/android_x86_64/lib/libQt6Core_x86_64.so C$:/Users/Admin/AppData/Local/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/libGLESv2.so C$:/Users/Admin/AppData/Local/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/libEGL.so || appuntitled1_autogen appuntitled1_autogen_timestamp_deps appuntitled1_tooling
   LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -O2 -g -DNDEBUG
   LINK_FLAGS = -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--gc-sections -Qunused-arguments -Wl,--no-undefined
   LINK_LIBRARIES = C:/Qt/6.7.1/android_x86_64/lib/libQt6Quick_x86_64.so  C:/Qt/6.7.1/android_x86_64/lib/libQt6QmlModels_x86_64.so  C:/Qt/6.7.1/android_x86_64/lib/libQt6Qml_x86_64.so  C:/Qt/6.7.1/android_x86_64/lib/libQt6QmlBuiltins_x86_64.a  C:/Qt/6.7.1/android_x86_64/lib/libQt6Network_x86_64.so  C:/Qt/6.7.1/android_x86_64/lib/libQt6OpenGL_x86_64.so  C:/Qt/6.7.1/android_x86_64/lib/libQt6Gui_x86_64.so  C:/Qt/6.7.1/android_x86_64/lib/libQt6Core_x86_64.so  -llog  -pthread  C:/Users/Admin/AppData/Local/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/libGLESv2.so  C:/Users/Admin/AppData/Local/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/23/libEGL.so   -latomic -lm
@@ -203,7 +187,7 @@ build all_qmllint_module: phony appuntitled1_qmllint_module
 #############################################
 # Utility command for appuntitled1_tooling
 
-build appuntitled1_tooling: phony untitled1/Main.qml untitled1/statistics.qml
+build appuntitled1_tooling: phony untitled1/Main.qml
 
 
 #############################################
@@ -366,18 +350,9 @@ build .rcc/qmlcache/appuntitled1_Main_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlca
 
 
 #############################################
-# Custom command for .rcc\qmlcache\appuntitled1_statistics_qml.cpp
-
-build .rcc/qmlcache/appuntitled1_statistics_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appuntitled1_statistics_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.7.1/mingw_64/bin/qmlcachegen.exe D$:/weight/untitled1/statistics.qml .qt/rcc/qmake_untitled1.qrc .qt/rcc/appuntitled1_raw_qml_0.qrc untitled1/appuntitled1.qmltypes untitled1/qmldir || appuntitled1_autogen appuntitled1_autogen_timestamp_deps appuntitled1_tooling
-  COMMAND = cmd.exe /C "cd /D D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Profile && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache && D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Profile\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.7.1/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /qt/qml/untitled1/statistics.qml -I D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile -I C:/Qt/6.7.1/android_x86_64/./qml -i D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/untitled1/qmldir --resource D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.qt/rcc/qmake_untitled1.qrc --resource D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.qt/rcc/appuntitled1_raw_qml_0.qrc -o D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmlcache/appuntitled1_statistics_qml.cpp D:/weight/untitled1/statistics.qml"
-  DESC = Generating .rcc/qmlcache/appuntitled1_statistics_qml.cpp
-  restat = 1
-
-
-#############################################
 # Custom command for .qt\rcc\qrc_appuntitled1_raw_qml_0.cpp
 
-build .qt/rcc/qrc_appuntitled1_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appuntitled1_raw_qml_0.cpp: CUSTOM_COMMAND D$:/weight/untitled1/Main.qml D$:/weight/untitled1/statistics.qml .qt/rcc/appuntitled1_raw_qml_0.qrc C$:/Qt/6.7.1/mingw_64/./bin/rcc.exe || appuntitled1_autogen appuntitled1_autogen_timestamp_deps appuntitled1_tooling
+build .qt/rcc/qrc_appuntitled1_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appuntitled1_raw_qml_0.cpp: CUSTOM_COMMAND D$:/weight/untitled1/Main.qml .qt/rcc/appuntitled1_raw_qml_0.qrc C$:/Qt/6.7.1/mingw_64/./bin/rcc.exe || appuntitled1_autogen appuntitled1_autogen_timestamp_deps appuntitled1_tooling
   COMMAND = cmd.exe /C "cd /D D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Profile && C:\Qt\6.7.1\mingw_64\.\bin\rcc.exe --output D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.qt/rcc/qrc_appuntitled1_raw_qml_0.cpp --name appuntitled1_raw_qml_0 D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.qt/rcc/appuntitled1_raw_qml_0.qrc --no-zstd"
   DESC = Running rcc for resource appuntitled1_raw_qml_0
   restat = 1
@@ -411,21 +386,21 @@ build CMakeFiles/appuntitled1_qmltyperegistration | ${cmake_ninja_workdir}CMakeF
 #############################################
 # Custom command for CMakeFiles\appuntitled1_qmllint
 
-build CMakeFiles/appuntitled1_qmllint | ${cmake_ninja_workdir}CMakeFiles/appuntitled1_qmllint: CUSTOM_COMMAND C$:/Qt/6.7.1/mingw_64/bin/qmllint.exe D$:/weight/untitled1/Main.qml D$:/weight/untitled1/statistics.qml .rcc/qmllint/appuntitled1.rsp || all_qmltyperegistrations appuntitled1_qmltyperegistration
+build CMakeFiles/appuntitled1_qmllint | ${cmake_ninja_workdir}CMakeFiles/appuntitled1_qmllint: CUSTOM_COMMAND C$:/Qt/6.7.1/mingw_64/bin/qmllint.exe D$:/weight/untitled1/Main.qml .rcc/qmllint/appuntitled1.rsp || all_qmltyperegistrations appuntitled1_qmltyperegistration
   COMMAND = cmd.exe /C "cd /D D:\weight\untitled1 && D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Profile\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.7.1/mingw_64/bin/qmllint.exe @D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmllint/appuntitled1.rsp"
 
 
 #############################################
 # Custom command for CMakeFiles\appuntitled1_qmllint_json
 
-build CMakeFiles/appuntitled1_qmllint_json | ${cmake_ninja_workdir}CMakeFiles/appuntitled1_qmllint_json: CUSTOM_COMMAND C$:/Qt/6.7.1/mingw_64/bin/qmllint.exe D$:/weight/untitled1/Main.qml D$:/weight/untitled1/statistics.qml .rcc/qmllint/appuntitled1_json.rsp || all_qmltyperegistrations appuntitled1_qmltyperegistration
+build CMakeFiles/appuntitled1_qmllint_json | ${cmake_ninja_workdir}CMakeFiles/appuntitled1_qmllint_json: CUSTOM_COMMAND C$:/Qt/6.7.1/mingw_64/bin/qmllint.exe D$:/weight/untitled1/Main.qml .rcc/qmllint/appuntitled1_json.rsp || all_qmltyperegistrations appuntitled1_qmltyperegistration
   COMMAND = cmd.exe /C "cd /D D:\weight\untitled1 && D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Profile\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.7.1/mingw_64/bin/qmllint.exe @D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmllint/appuntitled1_json.rsp"
 
 
 #############################################
 # Custom command for CMakeFiles\appuntitled1_qmllint_module
 
-build CMakeFiles/appuntitled1_qmllint_module | ${cmake_ninja_workdir}CMakeFiles/appuntitled1_qmllint_module: CUSTOM_COMMAND C$:/Qt/6.7.1/mingw_64/bin/qmllint.exe D$:/weight/untitled1/Main.qml D$:/weight/untitled1/statistics.qml .rcc/qmllint/appuntitled1_module.rsp || all_qmltyperegistrations appuntitled1_qmltyperegistration
+build CMakeFiles/appuntitled1_qmllint_module | ${cmake_ninja_workdir}CMakeFiles/appuntitled1_qmllint_module: CUSTOM_COMMAND C$:/Qt/6.7.1/mingw_64/bin/qmllint.exe D$:/weight/untitled1/Main.qml .rcc/qmllint/appuntitled1_module.rsp || all_qmltyperegistrations appuntitled1_qmltyperegistration
   COMMAND = cmd.exe /C "cd /D D:\weight\untitled1 && D:\weight\untitled1\build\Android_Qt_6_7_1_Clang_x86_64-Profile\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.7.1/mingw_64/bin/qmllint.exe @D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/.rcc/qmllint/appuntitled1_module.rsp"
 
 
@@ -435,15 +410,6 @@ build CMakeFiles/appuntitled1_qmllint_module | ${cmake_ninja_workdir}CMakeFiles/
 build untitled1/Main.qml | ${cmake_ninja_workdir}untitled1/Main.qml: CUSTOM_COMMAND D$:/weight/untitled1/Main.qml
   COMMAND = cmd.exe /C "cd /D D:\weight\untitled1 && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy D:/weight/untitled1/Main.qml D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/untitled1/Main.qml"
   DESC = Copying Main.qml to D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/untitled1/Main.qml
-  restat = 1
-
-
-#############################################
-# Custom command for untitled1\statistics.qml
-
-build untitled1/statistics.qml | ${cmake_ninja_workdir}untitled1/statistics.qml: CUSTOM_COMMAND D$:/weight/untitled1/statistics.qml
-  COMMAND = cmd.exe /C "cd /D D:\weight\untitled1 && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy D:/weight/untitled1/statistics.qml D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/untitled1/statistics.qml"
-  DESC = Copying statistics.qml to D:/weight/untitled1/build/Android_Qt_6_7_1_Clang_x86_64-Profile/untitled1/statistics.qml
   restat = 1
 
 
